@@ -36,7 +36,7 @@ func PartOne() {
 	}
 
 	end := time.Now()
-	fmt.Printf("Part one: %d (completed in %dμs)\n", sum, util.DurationInMicroSeconds(start, end))
+	fmt.Printf("Part one: %d (%dμs)\n", sum, util.DurationInMicroSeconds(start, end))
 }
 
 func PartTwo() {
@@ -63,7 +63,7 @@ func PartTwo() {
 	}
 
 	end := time.Now()
-	fmt.Printf("Part two: %d (completed in %dμs)\n", similarityScore, util.DurationInMicroSeconds(start, end))
+	fmt.Printf("Part two: %d (%dμs)\n", similarityScore, util.DurationInMicroSeconds(start, end))
 }
 
 func parseLists(lines []string) ([]int, []int) {
