@@ -6,9 +6,11 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func PartOne() {
+	start := time.Now()
 	puzzleInput, err := util.ReadFileLines("./inputs/dayone.txt")
 	if err != nil {
 		fmt.Println("could not read input lines: ", err)
@@ -33,10 +35,12 @@ func PartOne() {
 		}
 	}
 
-	fmt.Println("Part one: ", sum)
+	end := time.Now()
+	fmt.Printf("Part one: %d (completed in %d microseconds)\n", sum, util.DurationInMicroSeconds(start, end))
 }
 
 func PartTwo() {
+	start := time.Now()
 	puzzleInput, err := util.ReadFileLines("./inputs/dayone.txt")
 	if err != nil {
 		fmt.Println("could not read input lines: ", err)
@@ -58,7 +62,8 @@ func PartTwo() {
 		similarityScore += v * rightVals[v]
 	}
 
-	fmt.Println("Part two: ", similarityScore)
+	end := time.Now()
+	fmt.Printf("Part two: %d (completed in %d microseconds)\n", similarityScore, util.DurationInMicroSeconds(start, end))
 }
 
 func parseLists(lines []string) ([]int, []int) {
